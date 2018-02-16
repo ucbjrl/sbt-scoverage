@@ -11,6 +11,10 @@ resolvers ++= {
 }
 
 libraryDependencies += "org.scoverage" %% "scalac-scoverage-plugin" % "1.3.0"
+//libraryDependencies ++= Seq(
+//  "org.scoverage" %% "scalac-scoverage-plugin" % "1.3.0",
+//  "org.scoverage" %% "scalac-scoverage-runtime" % "1.3.0"
+//)
 
 publishMavenStyle := true
 
@@ -56,4 +60,4 @@ pomExtra := {
     </developers>
 }
 
-crossSbtVersions := Vector("0.13.16", "1.0.0-RC3")
+//crossSbtVersions := Vector("0.13.15", "1.0.0-RC3")

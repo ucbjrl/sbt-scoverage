@@ -17,7 +17,7 @@ object ScoverageSbtPlugin extends AutoPlugin {
 
   import autoImport._
 
-  val aggregateFilter = ScopeFilter(inAggregates(ThisProject),
+  val aggregateFilter = ScopeFilter(inAggregates(ThisProject)||inDependencies(ThisProject),
     inConfigurations(Compile)) // must be outside of the 'coverageAggregate' task (see: https://github.com/sbt/sbt/issues/1095 or https://github.com/sbt/sbt/issues/780)
 
   override def requires: JvmPlugin.type = plugins.JvmPlugin
